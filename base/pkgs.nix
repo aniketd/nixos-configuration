@@ -6,9 +6,11 @@
 
 {
   environment.systemPackages = with pkgs; [
+    # bare-bones
     st
     fish
     tmux
+    pass
     ripgrep
     dunst
     i3lock
@@ -18,19 +20,24 @@
     wget
     curl
     neovim
-    emacs
-    pass
-    inotify-tools
     gitAndTools.gitFull
-    firefox
-    fantasque-sans-mono
     networkmanagerapplet
+
+    # fleshing-out
+    fantasque-sans-mono
+    keybase-gui
+    emacs
+    inotify-tools
+    firefox
     cmus
     libvirt
-    stack # Haskell Stack
-    yarn
     chromium
-    keybase-gui
+
+    # dev-env
+    stack                   # Haskell Stack
+    rustup                  # Rust tool-belt
+    elixir                  # Elixir on Erlang
+    yarn                    # NPM alternative for the nodejs ecosystem
   ];
 
   # The NixOS release to be compatible with for stateful data such as databases.
