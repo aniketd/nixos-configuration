@@ -10,5 +10,5 @@ Installation:
 sudo mv /etc/nixos /etc/nixos.backup
 sudo git clone https://github.com/aniketd/nixos-configuration /etc/nixos
 sudo cp /etc/nixos.backup/hardware-configuration.nix /etc/nixos/hardware-configuration.nix
-sudo ln -sr /etc/nixos/machines/$MACHINE.nix /etc/nixos/configuration.nix
+sudo ln -sr /etc/nixos/machines/"$MACHINE".nix /etc/nixos/configuration.nix
 ----
