@@ -7,7 +7,7 @@
 {
   imports =
     [ # Include the results of the hardware scan.
-      ./hardware-configuration.nix
+      ../hardware-configuration.nix
       ../base/boot.nix
       ../base/network.nix
       ../base/pkgs.nix
