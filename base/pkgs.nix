@@ -38,6 +38,9 @@
     rustup                  # Rust tool-belt
     elixir                  # Elixir on Erlang
     yarn                    # NPM alternative for the nodejs ecosystem
+
+    # exercism
+    exercism
   ];
 
 }
