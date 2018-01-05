@@ -33,6 +33,9 @@
   services.xserver.displayManager.sddm.enable = true;
   services.xserver.desktopManager.plasma5.enable = true;
 
+  # Enable pulseaudio for Firefox
+  hardware.pulseaudio.enable = true;
+
   # The NixOS release to be compatible with for stateful data such as databases.
   system.stateVersion = "17.03";
 

@@ -28,7 +28,7 @@
     keybase-gui
     emacs
     inotify-tools
-    firefox
+    firefox-bin
     cmus
     libvirt
     chromium
