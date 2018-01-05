@@ -66,7 +66,7 @@ values."
      ;;             typescript-fmt-tool 'typescript-formatter)
      html
      react
-     python
+     ;; python
      ;; lua
      ;; sql
      ;; version-control
@@ -173,7 +173,7 @@ values."
    ;;                             :width normal
    ;;                             :powerline-scale 1.1)
    dotspacemacs-default-font '("Fantasque Sans Mono"
-                               :size 13
+                               :size 10
                                :weight normal
                                :width normal
                                :powerline-scale 1.1)
@@ -383,10 +383,10 @@ you should place your code here."
   ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
   ;; Org-mode
   ;;
-  (with-eval-after-load 'org
-    (setq org-directory "~/Sync/orgmode/")
-    (setq org-agenda-files '("~/Sync/orgmode/"))
-    )
+  ;; (with-eval-after-load 'org
+  ;;   (setq org-directory "~/Sync/orgmode/")
+  ;;   (setq org-agenda-files '("~/Sync/orgmode/"))
+  ;;   )
   ;;
   ;; add project specific org files to the agenda
   ;; (with-eval-after-load 'org-agenda
@@ -396,16 +396,16 @@ you should place your code here."
   ;; set custom bullets style because the default one sucks... :P
   ;; (setq org-bullets-bullet-list '("■" "◆" "▲" "▶"))
   ;; (setq org-bullets-bullet-list '("☯" "☰" "☱" "☲" "☳" "☴" "☵" "☶" "☷"))
-  (setq org-bullets-bullet-list '("✙" "✠" "✚" "✜" "✛" "♱" "♰" "☥" "✞" "✟" "✝" "†" "✢" "✣" "✤" "✥"))
+  ;; (setq org-bullets-bullet-list '("✙" "✠" "✚" "✜" "✛" "♱" "♰" "☥" "✞" "✟" "✝" "†" "✢" "✣" "✤" "✥"))
   ;; (setq org-bullets-bullet-list '("◐" "◑" "◒" "◓" "◴" "◵" "◶" "◷" "⚆" "⚇" "⚈" "⚉" "♁" "⊖" "⊗" "⊘"))
   ;; (setq org-bullets-bullet-list '("♠" "♣" "♥" "♦" "♤" "♧" "♡" "♢"))
-  (setq org-ellipsis "⚡⚡⚡")
-  (setq org-bullets-face-name (quote org-bullet-face))
-  (custom-set-faces
-   '(org-bullet-face ((t (:foreground "Fantasque Sans Mono" :size normal :height 1.5)))))
+  ;; (setq org-ellipsis "⚡⚡⚡")
+  ;; (setq org-bullets-face-name (quote org-bullet-face))
+  ;; (custom-set-faces
+  ;;  '(org-bullet-face ((t (:foreground "Fantasque Sans Mono" :size normal :height 1.5)))))
   ;;
   ;; permanently enable mode line display of org clock...
-  (setq spaceline-org-clock-p t)
+  ;; (setq spaceline-org-clock-p t)
   ;;
   ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
   ;; Web-mode
@@ -579,7 +579,7 @@ This function is called at the very end of Spacemacs initialization."
  '(cua-overwrite-cursor-color "#b58900")
  '(cua-read-only-cursor-color "#859900")
  '(evil-want-Y-yank-to-eol nil)
- '(fci-rule-color "#3C3D37")
+ '(fci-rule-color "#3C3D37" t)
  '(highlight-changes-colors (quote ("#FD5FF0" "#AE81FF")))
  '(highlight-symbol-colors
    (--map
@@ -609,7 +609,7 @@ This function is called at the very end of Spacemacs initialization."
     ("#dc322f" "#cb4b16" "#b58900" "#546E00" "#B4C342" "#00629D" "#2aa198" "#d33682" "#6c71c4")))
  '(package-selected-packages
    (quote
-    (helm-gtags ggtags flycheck-bashate adoc-mode markup-faces xterm-color shell-pop multi-term eshell-z eshell-prompt-extras esh-help erlang zenburn-theme solarized-theme flycheck-mix alchemist ob-elixir elixir-mode yapfify pyvenv pytest pyenv-mode py-isort pip-requirements live-py-mode hy-mode helm-pydoc cython-mode company-anaconda anaconda-mode pythonic evil-unimpaired pcache multiple-cursors js2-mode js-doc htmlize helm-gitignore helm-company helm-c-yasnippet gnuplot gitignore-mode gitconfig-mode gitattributes-mode git-timemachine git-messenger git-link gh-md flycheck-pos-tip pos-tip flycheck evil-magit magit magit-popup git-commit with-editor company-tern dash-functional tern company-statistics company coffee-mode auto-yasnippet yasnippet ac-ispell auto-complete vimrc-mode dactyl-mode erc-yt erc-view-log erc-social-graph erc-image erc-hl-nicks insert-shebang hide-comnt web-mode tagedit sql-indent slim-mode scss-mode sass-mode pug-mode less-css-mode helm-css-scss haml-mode emmet-mode company-web web-completion-data yaml-mode intero hlint-refactor hindent helm-hoogle haskell-snippets flycheck-haskell company-ghci company-ghc ghc haskell-mode company-cabal cmm-mode fish-mode company-shell web-beautify smeargle orgit org-projectile org-present org org-pomodoro alert log4e gntp org-download mmm-mode markdown-toc markdown-mode magit-gitflow livid-mode skewer-mode simple-httpd json-mode json-snatcher json-reformat js2-refactor ws-butler window-numbering which-key volatile-highlights vi-tilde-fringe uuidgen use-package toc-org spaceline powerline restart-emacs request rainbow-delimiters popwin persp-mode pcre2el paradox spinner org-plus-contrib org-bullets open-junk-file neotree move-text macrostep lorem-ipsum linum-relative link-hint info+ indent-guide ido-vertical-mode hydra hungry-delete hl-todo highlight-parentheses highlight-numbers parent-mode highlight-indentation help-fns+ helm-themes helm-swoop helm-projectile helm-mode-manager helm-make projectile pkg-info epl helm-flx helm-descbinds helm-ag google-translate golden-ratio flx-ido flx fill-column-indicator fancy-battery eyebrowse expand-region exec-path-from-shell evil-visualstar evil-visual-mark-mode evil-tutor evil-surround evil-search-highlight-persist evil-numbers evil-nerd-commenter evil-mc evil-matchit evil-lisp-state smartparens evil-indent-plus evil-iedit-state iedit evil-exchange evil-escape evil-ediff evil-args evil-anzu anzu evil goto-chg undo-tree eval-sexp-fu highlight elisp-slime-nav dumb-jump f s diminish define-word column-enforce-mode clean-aindent-mode bind-map bind-key auto-highlight-symbol auto-compile packed dash aggressive-indent adaptive-wrap ace-window ace-link ace-jump-helm-line helm avy helm-core popup async quelpa package-build spacemacs-theme)))
+    (winum symon string-inflection password-generator overseer noflet nix-mode nameless mvn monokai-theme meghanada maven-test-mode impatient-mode helm-purpose window-purpose imenu-list helm-nixos-options groovy-mode groovy-imports gradle-mode fuzzy flycheck-credo flycheck-bashate ghub let-alist evil-lion evil-cleverparens paredit ensime sbt-mode scala-mode editorconfig dante company-nixos-options nixos-options company-emacs-eclim eclim adoc-mode markup-faces xterm-color shell-pop multi-term eshell-z eshell-prompt-extras esh-help erlang zenburn-theme solarized-theme flycheck-mix alchemist ob-elixir elixir-mode yapfify pyvenv pytest pyenv-mode py-isort pip-requirements live-py-mode hy-mode helm-pydoc cython-mode company-anaconda anaconda-mode pythonic evil-unimpaired pcache multiple-cursors js2-mode js-doc htmlize helm-gitignore helm-company helm-c-yasnippet gnuplot gitignore-mode gitconfig-mode gitattributes-mode git-timemachine git-messenger git-link gh-md flycheck-pos-tip pos-tip flycheck evil-magit magit magit-popup git-commit with-editor company-tern dash-functional tern company-statistics company coffee-mode auto-yasnippet yasnippet ac-ispell auto-complete vimrc-mode dactyl-mode erc-yt erc-view-log erc-social-graph erc-image erc-hl-nicks insert-shebang hide-comnt web-mode tagedit sql-indent slim-mode scss-mode sass-mode pug-mode less-css-mode helm-css-scss haml-mode emmet-mode company-web web-completion-data yaml-mode intero hlint-refactor hindent helm-hoogle haskell-snippets flycheck-haskell company-ghci company-ghc ghc haskell-mode company-cabal cmm-mode fish-mode company-shell web-beautify smeargle orgit org-projectile org-present org org-pomodoro alert log4e gntp org-download mmm-mode markdown-toc markdown-mode magit-gitflow livid-mode skewer-mode simple-httpd json-mode json-snatcher json-reformat js2-refactor ws-butler window-numbering which-key volatile-highlights vi-tilde-fringe uuidgen use-package toc-org spaceline powerline restart-emacs request rainbow-delimiters popwin persp-mode pcre2el paradox spinner org-plus-contrib org-bullets open-junk-file neotree move-text macrostep lorem-ipsum linum-relative link-hint info+ indent-guide ido-vertical-mode hydra hungry-delete hl-todo highlight-parentheses highlight-numbers parent-mode highlight-indentation help-fns+ helm-themes helm-swoop helm-projectile helm-mode-manager helm-make projectile pkg-info epl helm-flx helm-descbinds helm-ag google-translate golden-ratio flx-ido flx fill-column-indicator fancy-battery eyebrowse expand-region exec-path-from-shell evil-visualstar evil-visual-mark-mode evil-tutor evil-surround evil-search-highlight-persist evil-numbers evil-nerd-commenter evil-mc evil-matchit evil-lisp-state smartparens evil-indent-plus evil-iedit-state iedit evil-exchange evil-escape evil-ediff evil-args evil-anzu anzu evil goto-chg undo-tree eval-sexp-fu highlight elisp-slime-nav dumb-jump f s diminish define-word column-enforce-mode clean-aindent-mode bind-map bind-key auto-highlight-symbol auto-compile packed dash aggressive-indent adaptive-wrap ace-window ace-link ace-jump-helm-line helm avy helm-core popup async quelpa package-build spacemacs-theme)))
  '(pos-tip-background-color "#A6E22E")
  '(pos-tip-foreground-color "#272822")
  '(smartrep-mode-line-active-bg (solarized-color-blend "#859900" "#073642" 0.2))
