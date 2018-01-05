@@ -7,8 +7,12 @@ Configuration files for NixOS machines...
 Installation:
 
 ----
+pushd "$WORKING_DIRECTORY"
 sudo mv /etc/nixos /etc/nixos.backup
-sudo git clone https://github.com/aniketd/nixos-configuration /etc/nixos
-sudo cp /etc/nixos.backup/hardware-configuration.nix /etc/nixos/hardware-configuration.nix
-sudo ln -sr /etc/nixos/machines/"$MACHINE".nix /etc/nixos/configuration.nix
+git clone https://github.com/aniketd/nixos-configuration
+pushd nixos-configuration
+ln -sr machines/"$MACHINE".nix configuration.nix
+sudo ln -s /etc/nixos.backup/hardware-configuration.nix hardware-configuration.nix
+sudo ln -s . /etc/nixos
+popd; popd
 ----
