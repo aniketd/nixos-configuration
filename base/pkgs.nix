@@ -10,6 +10,8 @@
     st
     fish
     tmux
+    exa
+    fd
     pass
     ripgrep
     dunst
