@@ -7,7 +7,10 @@
 {
   environment.systemPackages = with pkgs; [
     # bare-bones
+    alacritty
     st
+    exa
+    fd
     fish
     tmux
     pass
@@ -22,6 +25,7 @@
     neovim
     gitAndTools.gitFull
     networkmanagerapplet
+    tree
 
     # fleshing-out
     fantasque-sans-mono
@@ -38,6 +42,7 @@
     rustup                  # Rust tool-belt
     elixir                  # Elixir on Erlang
     yarn                    # NPM alternative for the nodejs ecosystem
+    openjdk # Only when needed... :P
 
     # exercism
     exercism
