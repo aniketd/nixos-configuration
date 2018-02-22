@@ -13,11 +13,8 @@
     fd
     fish
     tmux
-    exa
-    fd
     pass
     ripgrep
-    alacritty
     dunst
     i3lock
     feh
