@@ -40,13 +40,14 @@
     chromium
 
     # dev-env
+    docker
     stack                   # Haskell Stack
     rustup                  # Rust tool-belt
     elixir                  # Elixir on Erlang
     yarn                    # NPM alternative for the nodejs ecosystem
-    openjdk # Only when needed... :P
+    #openjdk                 # Only when needed... :P
 
-    # exercism
+    # extras
     exercism
   ];
 
