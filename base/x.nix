@@ -1,6 +1,13 @@
 { config, pkgs, ... }:
 
 {
+  environment.systemPackages = with pkgs; [
+    haskellPackages.xmonad
+    haskellPackages.xmobar
+    xfontsel
+    xlsfonts
+  ];
+
   services.xserver = {
     enable = true;
     layout = "us";
@@ -9,16 +16,21 @@
       enable = true;
       twoFingerScroll = true;
     };
-    # displayManager.lightdm.enable = true;
-    # windowManager = {
-    #   default = "Xmonad";
-    #   xmonad.enable = true;
-    # };
-    # desktopManager = {
-    #   default = "none";
-    #   xterm.enable = false;
-    # };
+    displayManager.lightdm.enable = true;
+    windowManager = {
+      default = "xmonad";
+      xmonad = {
+        enable = true;
+	enableContribAndExtras = true;
+      };
+    };
+    desktopManager = {
+      default = "none";
+      xterm.enable = false;
+    };
   };
+
+  programs.ssh.startAgent = true;
 
   services.compton = {
     enable = true;

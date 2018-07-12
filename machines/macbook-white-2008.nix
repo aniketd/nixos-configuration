@@ -30,8 +30,8 @@
   services.openssh.enable = true;
 
   # Enable the KDE Desktop Environment.
-  services.xserver.displayManager.sddm.enable = true;
-  services.xserver.desktopManager.plasma5.enable = true;
+  #services.xserver.displayManager.sddm.enable = true;
+  #services.xserver.desktopManager.plasma5.enable = true;
 
   # Enable pulseaudio for Firefox
   hardware.pulseaudio.enable = true;

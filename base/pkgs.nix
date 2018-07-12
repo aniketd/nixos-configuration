@@ -16,6 +16,7 @@
     pass
     ripgrep
     dunst
+    htop
     i3lock
     feh
     scrot
