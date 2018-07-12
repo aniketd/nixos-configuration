@@ -12,6 +12,7 @@
     exa
     fd
     fish
+    tldr
     tmux
     pass
     ripgrep
