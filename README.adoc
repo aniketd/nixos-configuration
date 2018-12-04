@@ -6,13 +6,41 @@ Configuration files for NixOS machines...
 
 Installation:
 
+After following through the NixOS manual up to generating the configuration with `nixos-generate-config`, as `root`
+
 ----
+export WORKING_DIR=/mnt/etc/nixos-personal
+export MACHINE=dell-latitude-7490-2018
+
+curl --create-dirs -L \
+  https://github.com/aniketd/nixos-configuration/archive/master.zip \
+  -o "$WORKING_DIR"/nixos-configuration.zip
 pushd "$WORKING_DIRECTORY"
-sudo mv /etc/nixos /etc/nixos.backup
-git clone https://github.com/aniketd/nixos-configuration
-pushd nixos-configuration
+unzip nixos-configuration.zip                        # This creates the `nixos-configuration-master` directory.
+cp -r nixos-configuration-master/* .
+
+rm -r nixos-configuration.zip nixos-configuration-master
+
+# Now you should have the following in the $WORKING_DIR (`/mnt/etc/nixos-personal`)
+# art/
+# base/
+# dotfiles/
+# LICENSE
+# machines/
+# README.adoc
+# scripts/
+
+mv /mnt/etc/nixos /mnt/etc/nixos.original             # For backups use `"nixos.backup.`date +%Y%m%d%H%M%S`"` as the filename.
+
 ln -sr machines/"$MACHINE".nix configuration.nix
-sudo ln -s /etc/nixos.backup/hardware-configuration.nix hardware-configuration.nix
-sudo ln -s . /etc/nixos
+ln -sr /mnt/etc/nixos.original/hardware-configuration.nix hardware-configuration.nix
+ln -sr . /mnt/etc/nixos
 popd; popd
+
+# Proceed with the installation.
+nixos-install
 ----
+
+After a successful installation, first congratulate yourself!
+
+...and then quickly change the entire `/etc/nixos` to now use version control.
