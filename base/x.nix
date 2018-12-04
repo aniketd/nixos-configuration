@@ -31,8 +31,6 @@
     };
   };
 
-  programs.ssh.startAgent = true;
-
   services.compton = {
     enable = true;
     fade = true;
