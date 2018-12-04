@@ -36,7 +36,8 @@
   # List services that you want to enable:
 
   # Enable the OpenSSH daemon.
-  #services.openssh.enable = true; # Cannot use with gnupg with SSH support
+  #services.openssh.enable = true; # ??? Cannot use with gnupg with SSH support
+  #programs.ssh.startAgent = true; # Cannot use with gnupg with SSH support
 
   # Enable the KDE Desktop Environment.
   #services.xserver.displayManager.sddm.enable = true;
