@@ -31,24 +31,24 @@
 
     # fleshing-out
     fantasque-sans-mono
-    keybase-gui
+    #keybase-gui
     emacs
     inotify-tools
     firefox-bin
     cmus
     libvirt
-    chromium
+    #chromium
 
     # dev-env
-    docker
-    stack                   # Haskell Stack
-    rustup                  # Rust tool-belt
-    elixir                  # Elixir on Erlang
-    yarn                    # NPM alternative for the nodejs ecosystem
+    #docker
+    #stack                   # Haskell Stack
+    #rustup                  # Rust tool-belt
+    #elixir                  # Elixir on Erlang
+    #yarn                    # NPM alternative for the nodejs ecosystem
     #openjdk                 # Only when needed... :P
 
     # extras
-    exercism
+    #exercism
   ];
 
 }
