@@ -12,7 +12,7 @@
     enable = true;
     layout = "us";
     xkbOptions = "eurosign:e";
-    libinput.enable = true;
+    #libinput.enable = true; # Either this or synaptics
     synaptics = {
       enable = true;
       twoFingerScroll = true;
